@@ -284,12 +284,12 @@
 
 %Jmeno, prijmeni, tituly autora / name surname and the titles of the author
 \def\get@author{\ifx\undefined\@author@tp\else%
-\@author@tp~\fi\MakeUppercase{\@author}\ifx\undefined\@author@ta\else,~\@author@ta\fi}
+\@author@tp~\fi\@author\ifx\undefined\@author@ta\else,~\@author@ta\fi}
 \def\getlc@author{\ifx\undefined\@author@tp\else%
 \@author@tp~\fi\@author\ifx\undefined\@author@ta\else,~\@author@ta\fi}
 %Jmeno, prijmeni, tituly vedouciho / name surname and the titles of the supervisor
 \def\get@supervisor{\ifx\undefined\@supervisor@tp\else%
-\@supervisor@tp~\fi\MakeUppercase{\@supervisor}\ifx\undefined\@supervisor@ta\else,~\@supervisor@ta\fi}
+\@supervisor@tp~\fi\@supervisor\ifx\undefined\@supervisor@ta\else,~\@supervisor@ta\fi}
 
 %-----------------------------------------------------------------------------
 % Projectinfo - parametrizace sablony / template parameters
