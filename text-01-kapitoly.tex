@@ -31,26 +31,83 @@ Více podrobností viz Metodické pokyny pro vypracování bakalářských a dip
 
 Vlastní text práce.
 
-\begin{table}[hbt!]  
-\caption{průměry}
-\centering
-\begin{tabular}{| l | r | r | r | }
+\begin{landscape}
+\pagestyle{mylandscape} %Call our predefined page type
+
+\begin{center}
+{\renewcommand{\arraystretch}{1.5}%
+\begin{xltabular}{1.0 \linewidth}{ % linewidth is for landscape but for center is textwidth 
+ | p { 6 em } | X % 6 em je pevná šířka sloupce zde prvního
+ | > { \centering\arraybackslash } X 
+ | > { \centering\arraybackslash } X 
+ | > { \centering\arraybackslash } X 
+ | > { \centering\arraybackslash } X
+ | > { \centering\arraybackslash } X
+ | > { \centering\arraybackslash } X 
+ | > { \centering\arraybackslash } X 
+ | > { \centering\arraybackslash } X 
+ | > { \centering\arraybackslash } X 
+ | > { \centering\arraybackslash } X | }
+\caption{Přehledová tabulka.} \label{tab:long} \\
+
 \hline
-        &        psnr &      ssim &      doba  \\
-model &       (db)    &           & gen. (s) \\
+Identifikace & Zařazení & Využití & Verifikace, validace & Zaměření & Počet agentů, rozsah&Zdrojový kód&Využití Pythonu&ODD protokol&Reálný čas&Zdroj dat\\ \hline
+\endfirsthead
+
+
+\multicolumn{11}{c}%
+
+{\tablename\ \thetable{} -- pokračování z předchozí stránky} \\
 \hline
-bik. int. & 28.3155 & 0.8566 & 0.0322 \\
-nn1000    & 30.1461 & 0.9043 & 0.8109 \\
-nn1001    & 30.0324 & 0.9023 & 0.7486 \\
-nn1002    & \textbf{30.1886} & \textbf{0.9046} & 1.1731 \\
-nn1003    & 30.0390 & 0.9030 & 1.1320 \\
-nn1004    & 24.9772 & 0.7172 & 4.4367 \\
-nn1005    & 26.1629 & 0.8004 & 4.0475 \\
-nn1006    & 27.9129 & 0.8438 & 4.0683 \\
-nn1007    & 27.5834 & 0.8360 & 4.2082 \\
+Identifikace & Zařazení& Využití& Verifikace, validace & Zaměření& Počet agentů, Rozsah&Zdrojový kód&Využití Pythonu&ODD protokol&Reálný čas& Zdroj dat \\ \hline 
+\endhead
+
+\hline \multicolumn{11}{|c|}{{Pokračování na následující stránce}} \\ \hline
+\endfoot
+
 \hline
-\end{tabular}
-\end{table}
+\endlastfoot
+Belotti M. C. T. D. et al., 2022 
+&evakuace davu
+& výzkum a tvorba modelů
+&validace
+&indoor, outdoor
+&54 agentů, koridor 3x38 metrů
+&ANO
+&základní kód
+&NE
+&NE 
+&Využívá předchozí studie
+\\ \hline
+Couasnon et al., 2019 
+
+&loď, evakuace
+& lodní inženýři, výzkum
+& NE
+& indoor
+& loď - 5. paluba, 180 m dlouhá, 838 agentů
+& NE
+& základní kód
+&NE
+&ANO
+&Agenti a prostředí generovány Mesa
+\\ \hline
+Crooks Andrew et al., 2017
+ 
+&evakuace po výbuchu
+&IZS, výzkum
+&ANO
+&outdoor
+& oblast 262 x 234 km, 22 795 866 osob, 225 906 km silnic
+&uveden nefunkční odkaz
+&zpracová-ní a mapování dat
+&NE
+&NE
+& Pomocí smíšené metody syntézy použity údaje ze sčítání lidu
+\\ \hline
+\end{xltabular}}
+\end{center}
+\end{landscape}
 
 
 \subsubsection{Podřazená kapitola}
