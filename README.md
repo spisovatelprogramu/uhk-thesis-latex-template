@@ -5,6 +5,7 @@ Hlavní změny:
 
 Změna řádkování na 1,5,
 nahrazení jednoduché tabulky tabulkou na šířku s otočeným číslováním a
-využívajícím vícestránkový formát.
+využívajícím vícestránkový formát. Zdroj informací:
+https://mirrors.nic.cz/tex-archive/macros/latex/required/tools/longtable.pdf
 
 Snad někomu pomůže.
