@@ -1,4 +1,4 @@
-\documentclass[]{fim-uhk-thesis}
+\documentclass[czech]{fim-uhk-thesis}
 %\documentclass[english]{fim-uhk-thesis} % without assignment - for the work start to avoid compilation problem
 % * Je-li práce psaná v anglickém jazyce, je zapotřebí u třídy použít 
 %   parametr english následovně:
@@ -28,6 +28,8 @@
 \renewcommand{\sfdefault}{qhv}%zavede TeX Gyre Heros jako sf
 %---tt------------
 \renewcommand{\ttdefault}{lmtt}% zavede Latin Modern tt jako tt
+%---řádkování----------------
+\renewcommand{\baselinestretch}{1.5}
 
 % vypne funkci šablony, která automaticky nahrazuje uvozovky,
 % aby nebyly prováděny nevhodné náhrady v popisech API apod.
@@ -36,11 +38,31 @@
 \csdoublequotesoff
 
 
-
+\usepackage{url}\def\UrlBreaks{\do\/\do-}
 \usepackage{url}
+\usepackage{longtable}
+\usepackage{tabularx}
 
-\def\UrlBreaks{\do\/\do-}
-\usepackage{breakurl}
+\usepackage{xltabular}
+
+\usepackage{tabularray}
+\usepackage{xcolor}
+\usepackage{pdflscape}
+\usepackage{fancyhdr} 
+
+\fancypagestyle{mylandscape}{
+\fancyhf{} %Clears the header/footer
+\fancyfoot{% Footer
+\makebox[\textwidth][r]{% Right
+  \rlap{\hspace{.75cm}% Push out of margin by \footskip
+    \smash{% Remove vertical height
+      \raisebox{4.87in}{% Raise vertically
+        \rotatebox{90}{\thepage}}}}}}% Rotate counter-clockwise
+\renewcommand{\headrulewidth}{0pt}% No header rule
+\renewcommand{\footrulewidth}{0pt}% No footer rule
+}
+
+
 
 
 % =======================================================================
@@ -118,9 +140,10 @@
 \widowpenalty=10000
 
 \include{text-03-zkratky}
-
 % začátek dokumentu
 \begin{document}
+
+
   % Vysazeni titulnich stran / Typesetting of the title pages
   % ----------------------------------------------
   \maketitle
@@ -226,7 +249,7 @@
   % ---------------------------------------------
   \appendix
 
-  \ifczech
+    \ifczech
     \renewcommand{\appendixpagename}{Přílohy}
     \renewcommand{\appendixtocname}{Přílohy}
     \renewcommand{\appendixname}{Příloha}
