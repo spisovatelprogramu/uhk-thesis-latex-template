@@ -63,6 +63,9 @@
 \usepackage{titlesec}
 \newcommand{\sectionbreak}{\clearpage}
 
+\usepackage{setspace}
+\setstretch{1.5}
+
 \ifczech
   \main@language{czech}
 \else
