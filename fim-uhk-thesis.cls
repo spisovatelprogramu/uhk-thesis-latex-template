@@ -640,6 +640,7 @@
   
 \vfill
 \noindent\mktxtcn{12}{Hradec Králové \hfill \@year\hspace{5.0pt}~}
+\vfill
 
 \iftwoside
   \newgeometry{left=3.46cm, text={15.2cm,23.0cm}, top=2.96cm}
